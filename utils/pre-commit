@@ -1,0 +1,18 @@
+#!/bin/sh
+
+git diff --staged --name-status | while read st file; do
+        # skip deleted files
+        if [ "$st" == 'D' ]
+        then
+            continue
+        fi
+        # do a check only on the python files
+        if [[ $file == *.py ]]
+        then
+            echo "$file"
+            yapf -d --style='{based_on_style: google}' "$file"
+            yapf -i --style='{based_on_style: google}' "$file"
+            git add "$file"
+        fi
+done
+
