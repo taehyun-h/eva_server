@@ -6,6 +6,16 @@ git diff --staged --name-status | while read st file; do
         then
             continue
         fi
+        # ignore grpc python file
+        if [[ $file == *_pb2_grpc.py ]]
+        then
+            continue
+        fi
+        # ignore protobuf python file
+        if [[ $file == *_pb2.py ]]
+        then
+            continue
+        fi
         # do a check only on the python files
         if [[ $file == *.py ]]
         then
