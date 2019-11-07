@@ -1,3 +1,7 @@
+# mac
+.DS_Store
+
 # pycharm
 .idea
+*.pyc
 venv
