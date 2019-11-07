@@ -1,0 +1,3 @@
+[submodule "eva_proto"]
+	path = eva_proto
+	url = git@github.com:taehyun-h/eva_proto.git
