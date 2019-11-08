@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='service.sign',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\nsign.proto\x12\x0cservice.sign\x1a\x0e\x65ntities.proto\" \n\rSignInRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\"6\n\x0eSignInResponse\x12$\n\x04user\x18\x01 \x01(\x0b\x32\x16.service.entities.User2M\n\x04Sign\x12\x45\n\x06SignIn\x12\x1b.service.sign.SignInRequest\x1a\x1c.service.sign.SignInResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\nsign.proto\x12\x0cservice.sign\x1a\x0e\x65ntities.proto\" \n\rSignInRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"6\n\x0eSignInResponse\x12$\n\x04user\x18\x01 \x01(\x0b\x32\x16.service.entities.User2M\n\x04Sign\x12\x45\n\x06SignIn\x12\x1b.service.sign.SignInRequest\x1a\x1c.service.sign.SignInResponse\"\x00\x62\x06proto3')
   ,
   dependencies=[entities__pb2.DESCRIPTOR,])
 
@@ -37,8 +37,8 @@ _SIGNINREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='user_id', full_name='service.sign.SignInRequest.user_id', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),

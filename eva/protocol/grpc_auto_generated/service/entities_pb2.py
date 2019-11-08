@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='service.entities',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0e\x65ntities.proto\x12\x10service.entities\"\xa8\x01\n\x04User\x12\x18\n\x10today_study_date\x18\x01 \x01(\x05\x12\"\n\x1atoday_studying_words_index\x18\x02 \x01(\x05\x12\x1f\n\x17today_studying_word_ids\x18\x03 \x03(\x05\x12!\n\x19today_testing_words_index\x18\x04 \x01(\x05\x12\x1e\n\x16today_testing_word_ids\x18\x05 \x03(\x05\x62\x06proto3')
+  serialized_pb=_b('\n\x0e\x65ntities.proto\x12\x10service.entities\"\xb4\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x18\n\x10today_study_date\x18\x02 \x01(\x05\x12\"\n\x1atoday_studying_words_index\x18\x03 \x01(\x05\x12\x1f\n\x17today_studying_word_ids\x18\x04 \x03(\x05\x12!\n\x19today_testing_words_index\x18\x05 \x01(\x05\x12\x1e\n\x16today_testing_word_ids\x18\x06 \x03(\x05\x62\x06proto3')
 )
 
 
@@ -34,36 +34,43 @@ _USER = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='today_study_date', full_name='service.entities.User.today_study_date', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='id', full_name='service.entities.User.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_studying_words_index', full_name='service.entities.User.today_studying_words_index', index=1,
+      name='today_study_date', full_name='service.entities.User.today_study_date', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_studying_word_ids', full_name='service.entities.User.today_studying_word_ids', index=2,
-      number=3, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='today_testing_words_index', full_name='service.entities.User.today_testing_words_index', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='today_studying_words_index', full_name='service.entities.User.today_studying_words_index', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_testing_word_ids', full_name='service.entities.User.today_testing_word_ids', index=4,
-      number=5, type=5, cpp_type=1, label=3,
+      name='today_studying_word_ids', full_name='service.entities.User.today_studying_word_ids', index=3,
+      number=4, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='today_testing_words_index', full_name='service.entities.User.today_testing_words_index', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='today_testing_word_ids', full_name='service.entities.User.today_testing_word_ids', index=5,
+      number=6, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -81,7 +88,7 @@ _USER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=37,
-  serialized_end=205,
+  serialized_end=217,
 )
 
 DESCRIPTOR.message_types_by_name['User'] = _USER
