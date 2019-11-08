@@ -1,5 +1,5 @@
-from eva.protocol.grpc_auto_generated import user_pb2
 from eva.protocol.data import user
+import user_pb2
 
 
 class UserDataLoader(object):
