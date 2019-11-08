@@ -17,10 +17,10 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='user.proto',
-  package='user',
+  package='data.user',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\nuser.proto\x12\x04user\"\x14\n\x04Time\x12\x0c\n\x04time\x18\x01 \x01(\x03\"1\n\x0cStudyingWord\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x15\n\rstudied_count\x18\x02 \x01(\x05\"U\n\x0bTestingWord\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x14\n\x0cpassed_count\x18\x02 \x01(\x05\x12$\n\x10last_passed_time\x18\x03 \x01(\x0b\x32\n.user.Time\";\n\rStudyingWords\x12*\n\x0estudying_words\x18\x01 \x03(\x0b\x32\x12.user.StudyingWord\"9\n\x0cTestingWords\x12)\n\x0estudying_words\x18\x01 \x03(\x0b\x32\x11.user.TestingWord\"\xca\x05\n\x04User\x12%\n\x11last_signing_time\x18\x01 \x01(\x0b\x32\n.user.Time\x12\x18\n\x10today_study_date\x18\x02 \x01(\x05\x12\x1c\n\x14last_studied_word_id\x18\x03 \x01(\x05\x12\x35\n\x0estudying_words\x18\x04 \x03(\x0b\x32\x1d.user.User.StudyingWordsEntry\x12\x33\n\rtesting_words\x18\x05 \x03(\x0b\x32\x1c.user.User.TestingWordsEntry\x12\"\n\x1atoday_studying_words_index\x18\x06 \x01(\x05\x12@\n\x14today_studying_words\x18\x07 \x03(\x0b\x32\".user.User.TodayStudyingWordsEntry\x12!\n\x19today_testing_words_index\x18\x08 \x01(\x05\x12>\n\x13today_testing_words\x18\t \x03(\x0b\x32!.user.User.TodayTestingWordsEntry\x1aH\n\x12StudyingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12!\n\x05value\x18\x02 \x01(\x0b\x32\x12.user.StudyingWord:\x02\x38\x01\x1a\x46\n\x11TestingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12 \n\x05value\x18\x02 \x01(\x0b\x32\x11.user.TestingWord:\x02\x38\x01\x1aN\n\x17TodayStudyingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\"\n\x05value\x18\x02 \x01(\x0b\x32\x13.user.StudyingWords:\x02\x38\x01\x1aL\n\x16TodayTestingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12!\n\x05value\x18\x02 \x01(\x0b\x32\x12.user.TestingWords:\x02\x38\x01\x62\x06proto3')
+  serialized_pb=_b('\n\nuser.proto\x12\tdata.user\"\x14\n\x04Time\x12\x0c\n\x04time\x18\x01 \x01(\x03\"1\n\x0cStudyingWord\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x15\n\rstudied_count\x18\x02 \x01(\x05\"Z\n\x0bTestingWord\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x14\n\x0cpassed_count\x18\x02 \x01(\x05\x12)\n\x10last_passed_time\x18\x03 \x01(\x0b\x32\x0f.data.user.Time\"@\n\rStudyingWords\x12/\n\x0estudying_words\x18\x01 \x03(\x0b\x32\x17.data.user.StudyingWord\">\n\x0cTestingWords\x12.\n\x0estudying_words\x18\x01 \x03(\x0b\x32\x16.data.user.TestingWord\"\xf7\x05\n\x04User\x12*\n\x11last_signing_time\x18\x01 \x01(\x0b\x32\x0f.data.user.Time\x12\x18\n\x10today_study_date\x18\x02 \x01(\x05\x12\x1c\n\x14last_studied_word_id\x18\x03 \x01(\x05\x12:\n\x0estudying_words\x18\x04 \x03(\x0b\x32\".data.user.User.StudyingWordsEntry\x12\x38\n\rtesting_words\x18\x05 \x03(\x0b\x32!.data.user.User.TestingWordsEntry\x12\"\n\x1atoday_studying_words_index\x18\x06 \x01(\x05\x12\x45\n\x14today_studying_words\x18\x07 \x03(\x0b\x32\'.data.user.User.TodayStudyingWordsEntry\x12!\n\x19today_testing_words_index\x18\x08 \x01(\x05\x12\x43\n\x13today_testing_words\x18\t \x03(\x0b\x32&.data.user.User.TodayTestingWordsEntry\x1aM\n\x12StudyingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12&\n\x05value\x18\x02 \x01(\x0b\x32\x17.data.user.StudyingWord:\x02\x38\x01\x1aK\n\x11TestingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.data.user.TestingWord:\x02\x38\x01\x1aS\n\x17TodayStudyingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\'\n\x05value\x18\x02 \x01(\x0b\x32\x18.data.user.StudyingWords:\x02\x38\x01\x1aQ\n\x16TodayTestingWordsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12&\n\x05value\x18\x02 \x01(\x0b\x32\x17.data.user.TestingWords:\x02\x38\x01\x62\x06proto3')
 )
 
 
@@ -28,13 +28,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _TIME = _descriptor.Descriptor(
   name='Time',
-  full_name='user.Time',
+  full_name='data.user.Time',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='time', full_name='user.Time.time', index=0,
+      name='time', full_name='data.user.Time.time', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -52,27 +52,27 @@ _TIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20,
-  serialized_end=40,
+  serialized_start=25,
+  serialized_end=45,
 )
 
 
 _STUDYINGWORD = _descriptor.Descriptor(
   name='StudyingWord',
-  full_name='user.StudyingWord',
+  full_name='data.user.StudyingWord',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='user.StudyingWord.id', index=0,
+      name='id', full_name='data.user.StudyingWord.id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='studied_count', full_name='user.StudyingWord.studied_count', index=1,
+      name='studied_count', full_name='data.user.StudyingWord.studied_count', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -90,34 +90,34 @@ _STUDYINGWORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42,
-  serialized_end=91,
+  serialized_start=47,
+  serialized_end=96,
 )
 
 
 _TESTINGWORD = _descriptor.Descriptor(
   name='TestingWord',
-  full_name='user.TestingWord',
+  full_name='data.user.TestingWord',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='user.TestingWord.id', index=0,
+      name='id', full_name='data.user.TestingWord.id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='passed_count', full_name='user.TestingWord.passed_count', index=1,
+      name='passed_count', full_name='data.user.TestingWord.passed_count', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='last_passed_time', full_name='user.TestingWord.last_passed_time', index=2,
+      name='last_passed_time', full_name='data.user.TestingWord.last_passed_time', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -135,20 +135,20 @@ _TESTINGWORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=93,
-  serialized_end=178,
+  serialized_start=98,
+  serialized_end=188,
 )
 
 
 _STUDYINGWORDS = _descriptor.Descriptor(
   name='StudyingWords',
-  full_name='user.StudyingWords',
+  full_name='data.user.StudyingWords',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='studying_words', full_name='user.StudyingWords.studying_words', index=0,
+      name='studying_words', full_name='data.user.StudyingWords.studying_words', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -166,20 +166,20 @@ _STUDYINGWORDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=180,
-  serialized_end=239,
+  serialized_start=190,
+  serialized_end=254,
 )
 
 
 _TESTINGWORDS = _descriptor.Descriptor(
   name='TestingWords',
-  full_name='user.TestingWords',
+  full_name='data.user.TestingWords',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='studying_words', full_name='user.TestingWords.studying_words', index=0,
+      name='studying_words', full_name='data.user.TestingWords.studying_words', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -197,27 +197,27 @@ _TESTINGWORDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=241,
-  serialized_end=298,
+  serialized_start=256,
+  serialized_end=318,
 )
 
 
 _USER_STUDYINGWORDSENTRY = _descriptor.Descriptor(
   name='StudyingWordsEntry',
-  full_name='user.User.StudyingWordsEntry',
+  full_name='data.user.User.StudyingWordsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='user.User.StudyingWordsEntry.key', index=0,
+      name='key', full_name='data.user.User.StudyingWordsEntry.key', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='user.User.StudyingWordsEntry.value', index=1,
+      name='value', full_name='data.user.User.StudyingWordsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -235,26 +235,26 @@ _USER_STUDYINGWORDSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=713,
-  serialized_end=785,
+  serialized_start=758,
+  serialized_end=835,
 )
 
 _USER_TESTINGWORDSENTRY = _descriptor.Descriptor(
   name='TestingWordsEntry',
-  full_name='user.User.TestingWordsEntry',
+  full_name='data.user.User.TestingWordsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='user.User.TestingWordsEntry.key', index=0,
+      name='key', full_name='data.user.User.TestingWordsEntry.key', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='user.User.TestingWordsEntry.value', index=1,
+      name='value', full_name='data.user.User.TestingWordsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -272,26 +272,26 @@ _USER_TESTINGWORDSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=787,
-  serialized_end=857,
+  serialized_start=837,
+  serialized_end=912,
 )
 
 _USER_TODAYSTUDYINGWORDSENTRY = _descriptor.Descriptor(
   name='TodayStudyingWordsEntry',
-  full_name='user.User.TodayStudyingWordsEntry',
+  full_name='data.user.User.TodayStudyingWordsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='user.User.TodayStudyingWordsEntry.key', index=0,
+      name='key', full_name='data.user.User.TodayStudyingWordsEntry.key', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='user.User.TodayStudyingWordsEntry.value', index=1,
+      name='value', full_name='data.user.User.TodayStudyingWordsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -309,26 +309,26 @@ _USER_TODAYSTUDYINGWORDSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=859,
-  serialized_end=937,
+  serialized_start=914,
+  serialized_end=997,
 )
 
 _USER_TODAYTESTINGWORDSENTRY = _descriptor.Descriptor(
   name='TodayTestingWordsEntry',
-  full_name='user.User.TodayTestingWordsEntry',
+  full_name='data.user.User.TodayTestingWordsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='user.User.TodayTestingWordsEntry.key', index=0,
+      name='key', full_name='data.user.User.TodayTestingWordsEntry.key', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='user.User.TodayTestingWordsEntry.value', index=1,
+      name='value', full_name='data.user.User.TodayTestingWordsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -346,75 +346,75 @@ _USER_TODAYTESTINGWORDSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=939,
-  serialized_end=1015,
+  serialized_start=999,
+  serialized_end=1080,
 )
 
 _USER = _descriptor.Descriptor(
   name='User',
-  full_name='user.User',
+  full_name='data.user.User',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='last_signing_time', full_name='user.User.last_signing_time', index=0,
+      name='last_signing_time', full_name='data.user.User.last_signing_time', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_study_date', full_name='user.User.today_study_date', index=1,
+      name='today_study_date', full_name='data.user.User.today_study_date', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='last_studied_word_id', full_name='user.User.last_studied_word_id', index=2,
+      name='last_studied_word_id', full_name='data.user.User.last_studied_word_id', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='studying_words', full_name='user.User.studying_words', index=3,
+      name='studying_words', full_name='data.user.User.studying_words', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='testing_words', full_name='user.User.testing_words', index=4,
+      name='testing_words', full_name='data.user.User.testing_words', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_studying_words_index', full_name='user.User.today_studying_words_index', index=5,
+      name='today_studying_words_index', full_name='data.user.User.today_studying_words_index', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_studying_words', full_name='user.User.today_studying_words', index=6,
+      name='today_studying_words', full_name='data.user.User.today_studying_words', index=6,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_testing_words_index', full_name='user.User.today_testing_words_index', index=7,
+      name='today_testing_words_index', full_name='data.user.User.today_testing_words_index', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='today_testing_words', full_name='user.User.today_testing_words', index=8,
+      name='today_testing_words', full_name='data.user.User.today_testing_words', index=8,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -432,8 +432,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=301,
-  serialized_end=1015,
+  serialized_start=321,
+  serialized_end=1080,
 )
 
 _TESTINGWORD.fields_by_name['last_passed_time'].message_type = _TIME
@@ -463,35 +463,35 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Time = _reflection.GeneratedProtocolMessageType('Time', (_message.Message,), {
   'DESCRIPTOR' : _TIME,
   '__module__' : 'user_pb2'
-  # @@protoc_insertion_point(class_scope:user.Time)
+  # @@protoc_insertion_point(class_scope:data.user.Time)
   })
 _sym_db.RegisterMessage(Time)
 
 StudyingWord = _reflection.GeneratedProtocolMessageType('StudyingWord', (_message.Message,), {
   'DESCRIPTOR' : _STUDYINGWORD,
   '__module__' : 'user_pb2'
-  # @@protoc_insertion_point(class_scope:user.StudyingWord)
+  # @@protoc_insertion_point(class_scope:data.user.StudyingWord)
   })
 _sym_db.RegisterMessage(StudyingWord)
 
 TestingWord = _reflection.GeneratedProtocolMessageType('TestingWord', (_message.Message,), {
   'DESCRIPTOR' : _TESTINGWORD,
   '__module__' : 'user_pb2'
-  # @@protoc_insertion_point(class_scope:user.TestingWord)
+  # @@protoc_insertion_point(class_scope:data.user.TestingWord)
   })
 _sym_db.RegisterMessage(TestingWord)
 
 StudyingWords = _reflection.GeneratedProtocolMessageType('StudyingWords', (_message.Message,), {
   'DESCRIPTOR' : _STUDYINGWORDS,
   '__module__' : 'user_pb2'
-  # @@protoc_insertion_point(class_scope:user.StudyingWords)
+  # @@protoc_insertion_point(class_scope:data.user.StudyingWords)
   })
 _sym_db.RegisterMessage(StudyingWords)
 
 TestingWords = _reflection.GeneratedProtocolMessageType('TestingWords', (_message.Message,), {
   'DESCRIPTOR' : _TESTINGWORDS,
   '__module__' : 'user_pb2'
-  # @@protoc_insertion_point(class_scope:user.TestingWords)
+  # @@protoc_insertion_point(class_scope:data.user.TestingWords)
   })
 _sym_db.RegisterMessage(TestingWords)
 
@@ -500,33 +500,33 @@ User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
   'StudyingWordsEntry' : _reflection.GeneratedProtocolMessageType('StudyingWordsEntry', (_message.Message,), {
     'DESCRIPTOR' : _USER_STUDYINGWORDSENTRY,
     '__module__' : 'user_pb2'
-    # @@protoc_insertion_point(class_scope:user.User.StudyingWordsEntry)
+    # @@protoc_insertion_point(class_scope:data.user.User.StudyingWordsEntry)
     })
   ,
 
   'TestingWordsEntry' : _reflection.GeneratedProtocolMessageType('TestingWordsEntry', (_message.Message,), {
     'DESCRIPTOR' : _USER_TESTINGWORDSENTRY,
     '__module__' : 'user_pb2'
-    # @@protoc_insertion_point(class_scope:user.User.TestingWordsEntry)
+    # @@protoc_insertion_point(class_scope:data.user.User.TestingWordsEntry)
     })
   ,
 
   'TodayStudyingWordsEntry' : _reflection.GeneratedProtocolMessageType('TodayStudyingWordsEntry', (_message.Message,), {
     'DESCRIPTOR' : _USER_TODAYSTUDYINGWORDSENTRY,
     '__module__' : 'user_pb2'
-    # @@protoc_insertion_point(class_scope:user.User.TodayStudyingWordsEntry)
+    # @@protoc_insertion_point(class_scope:data.user.User.TodayStudyingWordsEntry)
     })
   ,
 
   'TodayTestingWordsEntry' : _reflection.GeneratedProtocolMessageType('TodayTestingWordsEntry', (_message.Message,), {
     'DESCRIPTOR' : _USER_TODAYTESTINGWORDSENTRY,
     '__module__' : 'user_pb2'
-    # @@protoc_insertion_point(class_scope:user.User.TodayTestingWordsEntry)
+    # @@protoc_insertion_point(class_scope:data.user.User.TodayTestingWordsEntry)
     })
   ,
   'DESCRIPTOR' : _USER,
   '__module__' : 'user_pb2'
-  # @@protoc_insertion_point(class_scope:user.User)
+  # @@protoc_insertion_point(class_scope:data.user.User)
   })
 _sym_db.RegisterMessage(User)
 _sym_db.RegisterMessage(User.StudyingWordsEntry)
