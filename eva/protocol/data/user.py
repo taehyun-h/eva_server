@@ -1,4 +1,5 @@
 from eva.utils import time
+from eva.db import word_data_loader
 from queue import PriorityQueue
 
 NEW_STUDYING_WORDS_COUNT = 30
@@ -46,7 +47,8 @@ class User(object):
         for i in range(NEW_STUDYING_WORDS_COUNT):
             word_id = self.pb_object.last_studied_word_id + 1
             # todo : change real word data count
-            if word_id >= 100:
+            if word_id >= word_data_loader.WordDataLoader(
+            ).instance.get_word_count():
                 break
 
             self.pb_object.last_studied_word_id = word_id
