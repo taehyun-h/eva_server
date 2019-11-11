@@ -1,5 +1,4 @@
 from eva.protocol.data import user
-import user_pb2
 
 
 class UserDataLoader(object):
@@ -14,7 +13,7 @@ class UserDataLoader(object):
         return user_object
 
     def get_user_pb_object(self, user_id):
-        pb_object = user_pb2.User()
+        pb_object = user.create_default_user(user_id)
         file_path = self.get_file_path(user_id)
 
         try:
