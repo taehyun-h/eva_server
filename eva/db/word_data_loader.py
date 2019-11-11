@@ -7,6 +7,7 @@ class WordDataLoader(singleton.Singleton):
 
     def __init__(self):
         if not hasattr(self, '_words'):
+            self._words_count = 0
             self._words = self.load()
 
     def load(self):
@@ -27,6 +28,8 @@ class WordDataLoader(singleton.Singleton):
             word_id += 1
         f.close()
 
+        self._words_count = word_id
+
         return pb_object
 
     def save(self):
@@ -35,7 +38,7 @@ class WordDataLoader(singleton.Singleton):
         f.close()
 
     def get_word_count(self):
-        return len(self._words)
+        return self._words_count
 
     def get_word(self, word_id):
         return self._words.words[word_id]
