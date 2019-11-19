@@ -29,8 +29,8 @@ class StudyServicer(study_pb2_grpc.StudyServicer):
 
     def MoveToNextWord(self, request, context):
         new_index = move_to_word(request.user_id, 1)
-        return study_pb2.MoveToNextWordResponse(index=new_index)
+        return study_pb2.MoveToNextWordResponse(new_index=new_index)
 
     def MoveToPreviousWord(self, request, context):
         new_index = move_to_word(request.user_id, -1)
-        return study_pb2.MoveToPreviousWordResponse(index=new_index)
+        return study_pb2.MoveToPreviousWordResponse(new_index=new_index)
