@@ -158,7 +158,7 @@ class User(object):
             self.add_studying_word_order(current_word_id, next_order)
 
     def is_first_sign_in_today(self):
-        return not time.is_today_milliseconds(self.last_signing_time.time)
+        return not time.is_today(self.last_signing_time.time)
 
     def is_adding_newly_studying_words(self):
         return self.today_study_date % 2 == 1
