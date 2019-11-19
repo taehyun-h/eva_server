@@ -83,6 +83,12 @@ class User(object):
     def add_today_testing_word_ids(self, word_id):
         self.today_testing_word_ids.append(word_id)
 
+    def remove_studying_word_order(self, word_id):
+        del self.studying_word_orders[word_id]
+
+    def remove_testing_word_order(self, word_id):
+        del self.testing_word_orders[word_id]
+
     def increase_studied_count(self, word_id):
         studying_word = self.studying_words[word_id]
         studying_word.studied_count += 1
@@ -98,7 +104,9 @@ class User(object):
             if queue.empty():
                 break
 
-            self.add_today_studying_word_ids(queue.get()[1])
+            word_id = queue.get()[1]
+            self.add_today_studying_word_ids(word_id)
+            self.remove_studying_word_order(word_id)
 
     def update_today_testing_words(self):
         queue = PriorityQueue()
@@ -111,7 +119,9 @@ class User(object):
             if queue.empty():
                 break
 
-            self.add_today_testing_word_ids(queue.get()[1])
+            word_id = queue.get()[1]
+            self.add_today_testing_word_ids(word_id)
+            self.remove_testing_word_order(word_id)
 
     def add_newly_studying_words(self):
         if not self.is_adding_newly_studying_words():
