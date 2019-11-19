@@ -16,6 +16,7 @@ def move_to_word(user_id, word_index_delta):
     new_index = (current_index + word_index_delta + words_count) % words_count
 
     user_data.study_current_index()
+    user_data.update_today_studying_words_index(new_index)
 
     return new_index
 

@@ -43,6 +43,9 @@ class User(object):
     def update_last_studied_word_id(self, word_id):
         self.pb_object.last_studied_word_id = word_id
 
+    def update_today_studying_words_index(self, word_index):
+        self.pb_object.today_studying_words_index = word_index
+
     def update_today_study(self):
         self.pb_object.today_study_date += 1
         self.pb_object.today_studying_words_index = 0
