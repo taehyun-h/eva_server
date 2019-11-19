@@ -46,6 +46,7 @@ class SignServicer(sign_pb2_grpc.SignServicer):
         loader = user_data_loader.UserDataLoader()
         user_data = loader.get_user(request.user_id)
         sign_in(user_data)
+        loader.set_user_pb_object(request.user_id, user_data.pb_object)
 
         user_service = convert_user_data_to_user_service(user_data)
         return sign_pb2.SignInResponse(user=user_service)

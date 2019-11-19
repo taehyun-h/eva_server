@@ -17,6 +17,7 @@ def move_to_word(user_id, word_index_delta):
 
     user_data.study_current_index()
     user_data.update_today_studying_words_index(new_index)
+    loader.set_user_pb_object(user_id, user_data.pb_object)
 
     return new_index
 
