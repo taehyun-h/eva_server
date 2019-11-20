@@ -46,6 +46,9 @@ class User(object):
     def update_today_studying_words_index(self, word_index):
         self.pb_object.today_studying_words_index = word_index
 
+    def update_today_testing_words_index(self, word_index):
+        self.pb_object.today_testing_words_index = word_index
+
     def update_today_study(self):
         self.pb_object.today_study_date += 1
         self.pb_object.today_studying_words_index = 0
@@ -92,6 +95,10 @@ class User(object):
     def increase_studied_count(self, word_id):
         studying_word = self.studying_words[word_id]
         studying_word.studied_count += 1
+
+    def increase_passed_count(self, word_id):
+        testing_word = self.testing_words[word_id]
+        testing_word.passed_count += 1
 
     def update_today_studying_words(self):
         queue = PriorityQueue()
@@ -142,10 +149,6 @@ class User(object):
     def study_current_index(self):
         current_index = self.today_studying_words_index
         current_word_id = self.today_studying_word_ids[current_index]
-        if current_word_id in self.studying_word_orders:
-            return
-        if current_word_id in self.testing_word_orders:
-            return
 
         self.increase_studied_count(current_word_id)
         studied_count = self.studying_words[current_word_id].studied_count
@@ -156,6 +159,26 @@ class User(object):
         else:
             next_order = self.today_study_date + STUDY_PERIOD_DATE[studied_count]
             self.add_studying_word_order(current_word_id, next_order)
+
+    def i_know_current_test_index(self):
+        current_index = self.today_testing_words_index
+        current_word_id = self.today_testing_word_ids[current_index]
+
+        self.increase_passed_count(current_word_id)
+        passed_count = self.testing_words[current_word_id].passed_count
+        if passed_count >= len(TEST_PERIOD_DATE):
+            # todo : how do I do for all passed word?
+            pass
+        else:
+            next_order = self.today_study_date + TEST_PERIOD_DATE[passed_count]
+            self.add_testing_word_order(current_word_id, next_order)
+
+    def i_dont_know_current_test_index(self):
+        current_index = self.today_testing_words_index
+        current_word_id = self.today_testing_word_ids[current_index]
+        passed_count = self.testing_words[current_word_id].passed_count
+        next_order = self.today_study_date + TEST_PERIOD_DATE[passed_count]
+        self.add_testing_word_order(current_word_id, next_order)
 
     def is_first_sign_in_today(self):
         return not time.is_today(self.last_signing_time.time)
