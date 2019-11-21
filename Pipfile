@@ -9,6 +9,8 @@ verify_ssl = true
 grpcio = "==1.25.0"
 protobuf = "==3.8.0"
 grpcio-tools = "==1.25.0"
+pytest = "*"
+pytest-lazy-fixture = "*"
 
 [requires]
 python_version = "3.7"
